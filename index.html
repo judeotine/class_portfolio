@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Engineer specializing in full-stack development with React, Node.js and cloud infrastructure. Building scalable web applications.">
+    <meta name="keywords" content="Software Engineer, Full-Stack Developer, React Developer, Node.js Developer, Web Developer Kampala, Mobile App Developer, Cloud Infrastructure">
+    <meta name="author" content="Ocen Jude Otine">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Jude Portfolio">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Ocen Jude Otine</title>
+    <link rel="icon" type="image/x-icon" href="Images/jude.jpg">
+    <link rel="apple-touch-icon" href="icons/pwa-icon-192.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ocen Jude Otine",
+      "jobTitle": "Software Engineer",
+      "url": "https://judeotine.is-a.dev",
+      "email": "judextine28@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kampala",
+        "addressCountry": "UG"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/judeotine",
+        "https://github.com/judeotine"
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">Jude</a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#portfolio" class="nav__link">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#resume" class="nav__link">Resume</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero__container container">
+                <h1 class="hero__title">
+                    <span class="hero__title-line">I'm Ocen Jude</span>
+                    <span class="hero__title-line">Software Engineer.</span>
+                </h1>
+                <p class="hero__description">
+                    Building performant, scalable web and mobile experiences with modern technologies.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#portfolio" class="btn btn--primary">My Works</a>
+                    <a href="../Ocenjudeotine.pdf" class="btn btn--secondary" download>Download CV</a>
+                </div>
+                <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+                    <img src="icons/arrow-down.svg" alt="Scroll down" width="24" height="24">
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__subtitle">About Me</p>
+                    <h2 class="section__title">Get to know me</h2>
+                </div>
+                
+                <div class="about__content">
+                    <div class="about__image fade-in">
+                        <img src="Images/jude.jpg" alt="Ocen Jude Otine" class="about__photo">
+                    </div>
+                    <div class="about__text fade-in">
+                        <p>
+                            I'm a <strong>Software Engineer</strong> with a solid background in full-stack development, experienced in building scalable web applications using modern technologies. 
+                            I have a strong focus on performance, clean architecture and usability, with proven experience at 
+                            School Book and currently contributing to Strimy Technologies, Uganda's premier streaming platform.
+                        </p>
+                        <p>
+                            My expertise spans across workflow automation and Full-stack development. 
+                            I'm passionate about open-source development, real-time systems and continuous learning. 
+                            I bring both theoretical knowledge and practical experience to every project.
+                        </p>
+                        <!-- <a href="Docs/Ocenjudeotine.pdf" class="btn btn--primary" download>Download CV</a> -->
+                    </div>
+                    
+                    <div class="about__info fade-in">
+                        <div class="info__item">
+                            <span class="info__label">Name</span>
+                            <span class="info__value">Ocen Jude Otine</span>
+                        </div>
+                        <div class="info__item">
+                            <span class="info__label">Phone</span>
+                            <a href="tel:+256780849731" class="info__value">+256780849731</a>
+                        </div>
+                        <div class="info__item">
+                            <span class="info__label">Email</span>
+                            <a href="mailto:judextine28@gmail.com" class="info__value">judextine28@gmail.com</a>
+                        </div>
+                        <div class="info__item">
+                            <span class="info__label">Location</span>
+                            <a href="https://maps.app.goo.gl/LE4YsaReGUWmLFAk6" target="_blank" rel="noopener" class="info__value">Kampala, Uganda</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services">
+                    <div class="section__header">
+                        <h2 class="section__title">Services & Skills</h2>
+                    </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">
+                                <img src="icons/monitor.svg" alt="Web Development" width="32" height="32">
+                            </div>
+                            <h3 class="service-card__title">Full-stack Web Development</h3>
+                            <p class="service-card__description">Develop full-stack web applications using React, Next.js, Node.js and PostgreSQL, including user authentication, data storage and API integration.</p>
+                            <div class="service-card__tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">Redis</span>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-card__icon">
+                                <img src="icons/api.svg" alt="API Development" width="32" height="32">
+                            </div>
+                            <h3 class="service-card__title">API Development</h3>
+                            <p class="service-card__description">Design and develop custom APIs and integrate them with third-party services like payment gateways, social media or mapping services.</p>
+                            <div class="service-card__tags">
+                                <span class="tag">RESTful API</span>
+                                <span class="tag">API Security</span>
+                                <span class="tag">API Documentation</span>
+                                <span class="tag">API Testing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card">
+                            <div class="service-card__icon">
+                                <img src="icons/mobile.svg" alt="Mobile Development" width="32" height="32">
+                            </div>
+                            <h3 class="service-card__title">Mobile App Development</h3>
+                            <p class="service-card__description">Develop native mobile apps for Android and iOS using React Native and Kotlin, with features like push notifications, GPS integration and social media sharing.</p>
+                            <div class="service-card__tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Kotlin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio section">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__subtitle">Portfolio</p>
+                    <h2 class="section__title">Check out my featured projects</h2>
+                </div>
+                
+                <div class="portfolio__grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <img src="/Images/vimbosfitness.png" alt="Vimbos-Fitness" loading="lazy">
+                        </div>
+                        <div class="portfolio-card__content">
+                            <h3 class="portfolio-card__title">Vimbos-Fitness</h3>
+                            <p class="portfolio-card__description">A comprehensive fitness platform for door-to-door gym training services.</p>
+                            <div class="portfolio-card__tags">
+                                <span class="tag">Body building</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="portfolio-card__links">
+                                <a href="#" class="btn btn--primary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/github.svg" alt="GitHub" width="16" height="16">
+                                    GitHub
+                                </a>
+                                <a href="https://vimbosfitness.vercel.app" class="btn btn--secondary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/external-link.svg" alt="Demo" width="16" height="16">
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <img src="/Images/mindgrove.png" alt="MindGrove AI" loading="lazy">
+                        </div>
+                        <div class="portfolio-card__content">
+                            <h3 class="portfolio-card__title">MindGrove - AI Powered research assistant</h3>
+                            <p class="portfolio-card__description">Web application that revolutionizes academic research and learning through artificial intelligence. It serves as a comprehensive digital research assistant, empowering learners to maximize their productivity and comprehension.</p>
+                            <div class="portfolio-card__tags">
+                                <span class="tag">Education</span>
+                                <span class="tag">Artificial Intelligence</span>
+                                <span class="tag">React</span>
+                            </div>
+                            <div class="portfolio-card__links">
+                                <a href="https://www.mindgrove.me" class="btn btn--secondary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/external-link.svg" alt="Demo" width="16" height="16">
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <img src="/Images/spendwise.png" alt="SpendWise" loading="lazy">
+                        </div>
+                        <div class="portfolio-card__content">
+                            <h3 class="portfolio-card__title">SpendWise – Personal Budget Tracker</h3>
+                            <p class="portfolio-card__description">A cross-platform finance application developed with React, Capacitor and Supabase, enabling users to track expenses, manage budgets and visualize spending habits</p>
+                            <div class="portfolio-card__tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Budget</span>
+                                <span class="tag">Finance</span>
+                                <span class="tag">Capacitor</span>
+                                <span class="tag">Tailwind CSS</span>
+                            </div>
+                            <div class="portfolio-card__links">
+                                <a href="https://github.com/judeotine/SpendWise" class="btn btn--primary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/github.svg" alt="GitHub" width="16" height="16">
+                                    GitHub
+                                </a>
+                                <a href="https://spend-wise-blue.vercel.app" class="btn btn--secondary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/external-link.svg" alt="Demo" width="16" height="16">
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <img src="/Images/forkful.png" alt="Forkful" loading="lazy">
+                        </div>
+                        <div class="portfolio-card__content">
+                            <h3 class="portfolio-card__title">Forkful – Mobile Recipe Assistant</h3>
+                            <p class="portfolio-card__description">A delightful mobile app that helps users discover, save and cook meals with ease. Features include smart recipe search, meal planning and offline support. Built with React, Tailwind CSS and Capacitor.</p>
+                            <div class="portfolio-card__tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Vite</span>
+                                <span class="tag">API Integration</span>
+                                <span class="tag">Capacitor</span>
+                                <span class="tag">Tailwind CSS</span>
+                            </div>
+                            <div class="portfolio-card__links">
+                                <a href="https://github.com/judeotine/Forkful" class="btn btn--primary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/github.svg" alt="GitHub" width="16" height="16">
+                                    GitHub
+                                </a>
+                                <a href="https://forkful.vercel.app" class="btn btn--secondary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/external-link.svg" alt="Demo" width="16" height="16">
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card__image">
+                            <img src="/Images/RouteRider.png" alt="RouteRider" loading="lazy">
+                        </div>
+                        <div class="portfolio-card__content">
+                            <h3 class="portfolio-card__title">RouteRider - Smart Fleet Management</h3>
+                            <p class="portfolio-card__description">A bus management system that revolutionizes bus fleet operations through automation and real-time analytics. Designed for transport companies and private transportation, it cuts costs, boosts efficiency and enhances passenger experience.</p>
+                            <div class="portfolio-card__tags">
+                                <span class="tag">Bus Ticketing</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">React</span>
+                            </div>
+                            <div class="portfolio-card__links">
+                                <a href="https://www.routerider.site" class="btn btn--secondary btn--small" target="_blank" rel="noopener">
+                                    <img src="icons/external-link.svg" alt="Demo" width="16" height="16">
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume section">
+            <div class="container">
+                <!-- Education -->
+                <div class="resume__section">
+                    <h3 class="resume__section-title">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline__item">
+                        <div class="timeline__date">2024 - Present</div>
+                            <div class="timeline__content">
+                            <h4 class="timeline__title">Software Engineering</h4>
+                            <p class="timeline__source">Isbat University</p>
+                            <p class="timeline__description">Current.</p>
+                        </div>
+                    </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__date">2022 - 2023</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Uganda Advanced Certificate of Education</h4>
+                                <p class="timeline__source">Our Lady of Africa Namilyango SS</p>
+                                <p class="timeline__description">Advanced level of Education.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__date">2017 - 2021</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Uganda Certificate of Education</h4>
+                                <p class="timeline__source">Bishop Cipriano Kihangire SS</p>
+                                <p class="timeline__description">Ordinary level of Education</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume__section">
+                    <h3 class="resume__section-title">Professional Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="timeline__date">Sep 2025 - Present</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Lead</h4>
+                                <p class="timeline__source">GDG on Campus — ISBAT University</p>
+                                <p class="timeline__description">Driving the chapter's technical vision and operations: planning and delivering hands-on workshops, study jams and hackathons across Google technologies (Flutter, Firebase, TensorFlow, Google Cloud); establishing partnerships and speaker programs; curating learning tracks from fundamentals to production readiness; and mentoring core team members and contributors.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__date">Aug 2025 - Present</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Open Source Contributor</h4>
+                                <p class="timeline__source">Project Zoe</p>
+                                <p class="timeline__description">Contributing to Project Zoe, a church management system that empowers churches to focus on their core mission: people. By streamlining the process of managing relationships between members and the church, Project Zoe provides a solid foundation for adding new features tailored to each church's unique needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="timeline__date">Sept 2024 - Sept 2025</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Technical Lead</h4>
+                                <p class="timeline__source">GDG on Campus — ISBAT University</p>
+                                <p class="timeline__description">Responsible for driving the group's technical vision by organizing workshops, hackathons and study jams focused on Google technologies. Act as a mentor to members, lead hands-on coding sessions and ensure high-quality tech events.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline__item">
+                            <div class="timeline__date">Sep 2024 - Jan 2025</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Digital Marketing Specialist</h4>
+                                <p class="timeline__source">Luwa Technologies</p>
+                                <p class="timeline__description">Planned and executed digital marketing campaigns for Luwa Technologies' clients, focusing on improving reach and customer engagement. Managed social media content, optimized online profiles and coordinated promotional activities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume__section">
+                    <h3 class="resume__section-title">My Certifications</h3>
+                    <div class="timeline">
+                        
+                        <div class="timeline__item">
+                            <div class="timeline__date">June 2025</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">n8n Certified Automation Expert</h4>
+                                <p class="timeline__source">Udemy</p>
+                                <p class="timeline__description">Recognized expertise in designing, building and deploying advanced no-code/low-code automations using n8n workflows.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">Feb 2025</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">NGINX MasterClass</h4>
+                                <p class="timeline__source">Udemy</p>
+                                <p class="timeline__description">Gained hands-on experience configuring NGINX as a high-performance web server, reverse proxy and custom load balancer.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">Jan 2025</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">UI/UX with Figma and Adobe XD</h4>
+                                <p class="timeline__source">Udemy</p>
+                                <p class="timeline__description">Learned UI/UX design principles using Figma and Adobe XD. Designed and prototyped a responsive web application using user-centered design methods.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">Aug 2025</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Mastering Context Design for intelligent AI Agents</h4>
+                                <p class="timeline__source">Udemy</p>
+                                <p class="timeline__description">Designed a conversational AI interface for a customer service chatbot using dialogue management best practices. Implemented a context-aware AI agent using Node.js and the Rasa NLU library.</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">Dec 2024</div>
+                            <div class="timeline__content">
+                                <h4 class="timeline__title">Data Structures Algorithm DSA | Javascript LEETCODE</h4>
+                                <p class="timeline__source">Udemy</p>
+                                <p class="timeline__description">Mastered problem-solving skills using Divide and Conquer, Dynamic Programming, Greedy Algorithms and other advanced techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume__section">
+                    <h3 class="resume__section-title">My favourite tools</h3>
+                    <div class="tech-stack-list">
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">Frontend</h4>
+                            <ul class="tech-category__list">
+                                <li>React</li>
+                                <li>Next.js</li>
+                                <li>React Native</li>
+                                <li>JavaScript</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">Backend</h4>
+                            <ul class="tech-category__list">
+                                <li>Node.js</li>
+                                <li>Laravel</li>
+                                <li>Nest.js</li>
+                                <li>C#</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">Automations</h4>
+                            <ul class="tech-category__list">
+                                <li>n8n</li>
+                                <li>Zapier</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">Design</h4>
+                            <ul class="tech-category__list">
+                                <li>Figma</li>
+                                <li>Adobe Photoshop</li>
+                                <li>Adobe Illustrator</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">Database</h4>
+                            <ul class="tech-category__list">
+                                <li>Supabase</li>
+                                <li>Firebase</li>
+                                <li>PostgreSQL</li>
+                                <li>MySQL</li>
+                                <li>MongoDB</li>
+                                <li>Redis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">Cloud & DevOps</h4>
+                            <ul class="tech-category__list">
+                                <li>Google Cloud Platform (GCP)</li>
+                                <li>Amazon Web Services (AWS)</li>
+                                <li>NGINX</li>
+                                <li>Docker</li>
+                                <li>Jenkins</li>
+                                <li>Kubernetes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials section">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__subtitle">Testimonials</p>
+                    <h2 class="section__title">What people say about me</h2>
+                </div>
+                
+                <div class="testimonials__carousel">
+                    <button class="testimonials__btn testimonials__btn--prev" id="testimonials-prev" aria-label="Previous testimonial">
+                        <img src="icons/arrow-left.svg" alt="Previous" width="20" height="20">
+                    </button>
+                    
+                    <div class="testimonials__track" id="testimonials-track">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <div class="testimonial-card__quote">
+                                    <img src="icons/quote.svg" alt="Quote" width="40" height="40" class="quote-icon">
+                                </div>
+                                <p class="testimonial-card__text">
+                                    "Jude is such a good person to work with, I like his conduct and professionalism and how delivers work and exceeds even set expectations, can't wait to see more how his career unfolds for the next decade, much great time I have had working with you man."
+                                </p>
+                                <div class="testimonial-card__author">
+                                    <div class="testimonial-card__avatar">
+                                        <img src="Images/avatars/hussien.png" alt="Hussien Kizz" width="60" height="60">
+                                    </div>
+                                    <div class="testimonial-card__info">
+                                        <h4 class="testimonial-card__name">Hussien Kizz</h4>
+                                        <p class="testimonial-card__role">CEO, NileSquad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <div class="testimonial-card__quote">
+                                    <img src="icons/quote.svg" alt="Quote" width="40" height="40" class="quote-icon">
+                                </div>
+                                <p class="testimonial-card__text">
+                                    "I was blown away by the professionalism and creativity of Jude. My new website has exceeded all my expectations and has been a game-changer for my fitness business!"
+                                </p>
+                                <div class="testimonial-card__author">
+                                    <div class="testimonial-card__avatar">
+                                        <img src="Images/avatars/levi.jpg" alt="Ocen Levi" width="60" height="60">
+                                    </div>
+                                    <div class="testimonial-card__info">
+                                        <h4 class="testimonial-card__name">Ocen Levi</h4>
+                                        <p class="testimonial-card__role">Fitness Trainer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <div class="testimonial-card__quote">
+                                    <img src="icons/quote.svg" alt="Quote" width="40" height="40" class="quote-icon">
+                                </div>
+                                <p class="testimonial-card__text">
+                                    "Jude is versatile, hard worker. To this day, I haven't met a person with the same passion for the craft. Always learning new things and grinding to get things done. Can't wait for our next project together."
+                                </p>
+                                <div class="testimonial-card__author">
+                                    <div class="testimonial-card__avatar">
+                                        <img src="Images/avatars/noble.jpg" alt="Dev Noble" width="60" height="60">
+                                    </div>
+                                    <div class="testimonial-card__info">
+                                        <h4 class="testimonial-card__name">Asiimwe Noble</h4>
+                                        <p class="testimonial-card__role">Founder, Xapisoft</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <div class="testimonial-card__quote">
+                                    <img src="icons/quote.svg" alt="Quote" width="40" height="40" class="quote-icon">
+                                </div>
+                                <p class="testimonial-card__text">
+                                    "Jude is an excellent developer and a great team player. Also, his UI designs are immaculate"
+                                </p>
+                                <div class="testimonial-card__author">
+                                    <div class="testimonial-card__avatar">
+                                        <img src="Images/avatars/simeon.jpg" alt="Mubiru Simeon" width="60" height="60">
+                                    </div>
+                                    <div class="testimonial-card__info">
+                                        <h4 class="testimonial-card__name">Mubiru Simeon</h4>
+                                        <p class="testimonial-card__role">CTO, Casa Management Solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__content">
+                                <div class="testimonial-card__quote">
+                                    <img src="icons/quote.svg" alt="Quote" width="40" height="40" class="quote-icon">
+                                </div>
+                                <p class="testimonial-card__text">
+                                    "Working with Jude has been an exceptional experience. His professionalism, technical expertise and commitment to delivering quality work that exceeds expectations make him an invaluable collaborator. Jude's conduct and work ethic are exemplary and I'm confident his career will continue to flourish in the coming years. It's been a pleasure working alongside such a talented professional"
+                                </p>
+                                <div class="testimonial-card__author">
+                                    <div class="testimonial-card__avatar">
+                                        <img src="Images/avatars/nimungu.png" alt="Nimungu" width="60" height="60">
+                                    </div>
+                                    <div class="testimonial-card__info">
+                                        <h4 class="testimonial-card__name">Nimungu Jude</h4>
+                                        <p class="testimonial-card__role">Founder, RouteRider</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="testimonials__btn testimonials__btn--next" id="testimonials-next" aria-label="Next testimonial">
+                        <img src="icons/arrow-right.svg" alt="Next" width="20" height="20">
+                    </button>
+                    
+                    <div class="testimonials__controls">
+                        <div class="testimonials__indicators" id="testimonials-indicators"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="articles" class="articles section">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__subtitle">Latest Articles</p>
+                    <h2 class="section__title">My recent writings</h2>
+                </div>
+                
+                <div class="articles__grid">
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <img src="Images/Articles/vectorDBs.jpg" alt="Article 1" loading="lazy">
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__date">Oct 27, 2025</span>
+                                <span class="article-card__category">Artificial Intelligence</span>
+                            </div>
+                            <h3 class="article-card__title">Vector Databases Demystified: The Backbone of Modern AI Search and Retrieval</h3>
+                            <p class="article-card__excerpt">
+                                Discover the essential role of vector databases in modern AI applications, including search and retrieval, recommendation systems and document understanding.
+                            </p>
+                            <a href="https://medium.com/@judeotine/vector-databases-demystified-the-backbone-of-modern-ai-search-and-retrieval-70a75b5c9e48" class="article-card__link" target="_blank" rel="noopener">
+                                Read More
+                                <img src="icons/arrow-right.svg" alt="Read more" width="16" height="16">
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <img src="Images/Articles/code2Community.png" alt="Article 2" loading="lazy">
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__date">Nov 05, 2025</span>
+                                <span class="article-card__category">Community</span>
+                            </div>
+                            <h3 class="article-card__title">From Code to Community: Why Engineers should master personal</h3>
+                            <p class="article-card__excerpt">
+                                Discover why mastering personal branding is crucial for engineers to succeed in their careers, leveraging code as a powerful tool for building meaningful connections and opportunities.
+                            </p>
+                            <a href="https://medium.com/@judeotine/from-code-to-community-why-engineers-must-master-personal-branding-033e96b3a337" class="article-card__link" target="_blank" rel="noopener">
+                                Read More
+                                <img src="icons/arrow-right.svg" alt="Read more" width="16" height="16">
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <img src="Images/Articles/system.jpg" alt="Article 3" loading="lazy">
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__date">Oct 25, 2025</span>
+                                <span class="article-card__category">System Design</span>
+                            </div>
+                            <h3 class="article-card__title">DSystem Design 101: Essential Concepts for Modern Engineers</h3>
+                            <p class="article-card__excerpt">
+                                Learn the essential concepts of system design, including the different components and how they interact with each other.
+                            </p>
+                            <a href="https://medium.com/javascript-in-plain-english/system-design-101-essential-concepts-every-developer-should-master-40fe0c5cc9e4" class="article-card__link" target="_blank" rel="noopener">
+                                Read More
+                                <img src="icons/arrow-right.svg" alt="Read more" width="16" height="16">
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <img src="Images/Articles/auth.png" alt="Article 4" loading="lazy">
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__date">May 26, 2025</span>
+                                <span class="article-card__category">Security</span>
+                            </div>
+                            <h3 class="article-card__title">Stop Using localStorage for Auth Tokens (Here’s What to Do Instead)</h3>
+                            <p class="article-card__excerpt">
+                                Learn why localStorage is not a secure way to store authentication tokens and what to use instead.
+                            </p>
+                            <a href="https://medium.com/@judeotine/stop-using-localstorage-for-auth-tokens-heres-what-to-do-instead-966ad1eea8f9" class="article-card__link" target="_blank" rel="noopener">
+                                Read More
+                                <img src="icons/arrow-right.svg" alt="Read more" width="16" height="16">
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <img src="Images/Articles/composable backend.webp" alt="Article 5" loading="lazy">
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__date">Oct 27, 2025</span>
+                                <span class="article-card__category">System Design</span>
+                            </div>
+                            <h3 class="article-card__title">Composable Backends: Building Flexible Systems with API Gateways and Modular Services</h3>
+                            <p class="article-card__excerpt">
+                                Learn how to build flexible systems with API gateways and modular services, using the principles of composable architecture.
+                            </p>
+                            <a href="https://judeotine.medium.com/composable-backends-building-flexible-systems-with-api-gateways-and-modular-services-a474ddf24fba" class="article-card__link" target="_blank" rel="noopener">
+                                Read More
+                                <img src="icons/arrow-right.svg" alt="Read more" width="16" height="16">
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <img src="Images/Articles/ai.jpg" alt="Article 6" loading="lazy">
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__date">Oct 27, 2025</span>
+                                <span class="article-card__category">SDK Development</span>
+                            </div>
+                            <h3 class="article-card__title">AI SDKs in Production: Patterns, Pitfalls and Best Practices from Real-World Deployments</h3>
+                            <p class="article-card__excerpt">
+                                Learn about the patterns, pitfalls and best practices for building AI SDKs in production, from real-world deployments.
+                            </p>
+                            <a href="https://medium.com/@judeotine/ai-sdks-in-production-patterns-pitfalls-and-best-practices-from-real-world-deployments-eed1fb4f9626" class="article-card__link" target="_blank" rel="noopener">
+                                Read More
+                                <img src="icons/arrow-right.svg" alt="Read more" width="16" height="16">
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__subtitle">Contact</p>
+                    <h2 class="section__title">Reach out to me</h2>
+                </div>
+                
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <p>Feel free to reach out for collaboration opportunities or just to say hello!</p>
+                        <div class="contact__details">
+                            <a href="mailto:judextine28@gmail.com" class="contact__link">
+                                <img src="icons/email.svg" alt="Email" width="20" height="20">
+                                judextine28@gmail.com
+                            </a>
+                            <a href="https://maps.app.goo.gl/LE4YsaReGUWmLFAk6" target="_blank" rel="noopener" class="contact__link">
+                                <img src="icons/location.svg" alt="Location" width="20" height="20">
+                                Kampala, Uganda
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mzzbroyv" method="POST">
+                        <div class="form__group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="company">Company Name</label>
+                            <input type="text" name="company" id="company" placeholder="Company Name">
+                        </div>
+                        <div class="form__group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Send Message</button>
+                        <div class="form__message" id="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <img src="icons/arrow-up.svg" alt="Back to top" width="20" height="20">
+    </button>
+
+    <script src="script.js"></script>
+    <script src="Pwa/register-sw.js"></script>
+</body>
+</html>
+
