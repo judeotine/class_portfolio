@@ -26,10 +26,6 @@ class_portfolio/
 ├── index.html          # Main HTML file
 ├── styles.css          # All styles
 ├── script.js           # Main JavaScript functionality
-├── manifest.json       # PWA manifest
-├── Pwa/                # PWA related files
-│   ├── service-worker.js
-│   └── register-sw.js
 ├── icons/              # SVG icons
 ├── Images/             # Images and assets
 │   ├── Articles/
