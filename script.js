@@ -19,6 +19,8 @@
         initHeaderScroll();
         initBackToTop();
         initTestimonialsCarousel();
+        initPortfolioTabs();
+        initToolsTabs();
     }
 
     function updateYear() {
@@ -465,6 +467,82 @@
         formMessage.style.display = 'block';
 
         formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function initPortfolioTabs() {
+        const tabs = document.querySelectorAll('.portfolio__tab');
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+        if (!tabs.length || !portfolioCards.length) return;
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                portfolioCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    if (category === 'all' || cardCategory === category) {
+                        card.classList.remove('hidden');
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            card.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+
+    function initToolsTabs() {
+        const tabs = document.querySelectorAll('.tools__tab');
+        const toolCards = document.querySelectorAll('.tool-card');
+
+        if (!tabs.length || !toolCards.length) return;
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                toolCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    if (category === 'all' || cardCategory === category) {
+                        card.classList.remove('hidden');
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(-10px)';
+                        setTimeout(() => {
+                            card.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
     }
 
     function initLazyLoading() {

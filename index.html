@@ -68,16 +68,18 @@
     <main>
         <section id="home" class="hero">
             <div class="hero__container container">
-                <h1 class="hero__title">
-                    <span class="hero__title-line">I'm Ocen Jude</span>
-                    <span class="hero__title-line">Software Engineer.</span>
-                </h1>
-                <p class="hero__description">
-                    Building performant, scalable web and mobile experiences with modern technologies.
-                </p>
-                <div class="hero__buttons">
-                    <a href="#portfolio" class="btn btn--primary">My Works</a>
-                    <a href="Docs/ocenjudeotine.pdf" class="btn btn--secondary" download>Download CV</a>
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        <span class="hero__title-line hero__title-line--first">I'm Ocen Jude</span>
+                        <span class="hero__title-line hero__title-line--second">Software Engineer.</span>
+                    </h1>
+                    <p class="hero__description">
+                        Building performant, scalable web and mobile experiences with modern technologies.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#portfolio" class="btn btn--primary btn--hero">My Works</a>
+                        <a href="Docs/ocenjudeotine.pdf" class="btn btn--secondary btn--hero" download>Download CV</a>
+                    </div>
                 </div>
                 <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
                     <img src="icons/arrow-down.svg" alt="Scroll down" width="24" height="24">
@@ -193,8 +195,14 @@
                     <h2 class="section__title">Check out my featured projects</h2>
                 </div>
                 
+                <div class="portfolio__tabs">
+                    <button class="portfolio__tab active" data-category="all">All Projects</button>
+                    <button class="portfolio__tab" data-category="web">Web Development</button>
+                    <button class="portfolio__tab" data-category="mobile">Mobile Applications</button>
+                </div>
+                
                 <div class="portfolio__grid">
-                    <div class="portfolio-card">
+                    <div class="portfolio-card" data-category="web">
                         <div class="portfolio-card__image">
                             <img src="/Images/vimbosfitness.png" alt="Vimbos-Fitness" loading="lazy">
                         </div>
@@ -216,7 +224,7 @@
                         </div>
                     </div>
                     
-                    <div class="portfolio-card">
+                    <div class="portfolio-card" data-category="web">
                         <div class="portfolio-card__image">
                             <img src="/Images/mindgrove.png" alt="MindGrove AI" loading="lazy">
                         </div>
@@ -237,7 +245,7 @@
                         </div>
                     </div>
                     
-                    <div class="portfolio-card">
+                    <div class="portfolio-card" data-category="mobile">
                         <div class="portfolio-card__image">
                             <img src="/Images/spendwise.png" alt="SpendWise" loading="lazy">
                         </div>
@@ -252,10 +260,6 @@
                                 <span class="tag">Tailwind CSS</span>
                             </div>
                             <div class="portfolio-card__links">
-                                <!-- <a href="https://github.com/judeotine/SpendWise" class="btn btn--primary btn--small" target="_blank" rel="noopener">
-                                    <img src="icons/github.svg" alt="GitHub" width="16" height="16">
-                                    GitHub
-                                </a> -->
                                 <a href="Docs/App/spendwise.apk" class="btn btn--secondary btn--small" target="_blank" rel="noopener">
                                     <img src="icons/external-link.svg" alt="Download" width="16" height="16">
                                     Download
@@ -264,8 +268,7 @@
                         </div>
                     </div>
                     
-                    
-                    <div class="portfolio-card">
+                    <div class="portfolio-card" data-category="web">
                         <div class="portfolio-card__image">
                             <img src="/Images/RouteRider.png" alt="RouteRider" loading="lazy">
                         </div>
@@ -286,8 +289,7 @@
                         </div>
                     </div>
 
-                    <div class="portfolio__grid">
-                    <div class="portfolio-card">
+                    <div class="portfolio-card" data-category="web">
                         <div class="portfolio-card__image">
                             <img src="/Images/uisnapshot.png" alt="UI SnapShot" loading="lazy">
                         </div>
@@ -310,7 +312,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -440,68 +441,123 @@
 
                 <div class="resume__section">
                     <h3 class="resume__section-title">My favourite tools</h3>
-                    <div class="tech-stack-list">
-                        <div class="tech-category">
-                            <h4 class="tech-category__title">Frontend</h4>
-                            <ul class="tech-category__list">
-                                <li>React</li>
-                                <li>Next.js</li>
-                                <li>React Native</li>
-                                <li>JavaScript</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>Tailwind CSS</li>
-                            </ul>
+                    <div class="tools__tabs">
+                        <button class="tools__tab active" data-category="all">All Tools</button>
+                        <button class="tools__tab" data-category="Frontend">Frontend</button>
+                        <button class="tools__tab" data-category="Backend">Backend</button>
+                        <button class="tools__tab" data-category="Automations">Automations</button>
+                        <button class="tools__tab" data-category="Design">Design</button>
+                        <button class="tools__tab" data-category="Database">Database</button>
+                        <button class="tools__tab" data-category="Cloud & DevOps">Cloud & DevOps</button>
+                    </div>
+                    <div class="tools__grid">
+                        <div class="tool-card" data-category="Frontend">
+                            <div class="tool-card__name">React</div>
+                            <div class="tool-card__badge">Frontend</div>
                         </div>
-                        
-                        <div class="tech-category">
-                            <h4 class="tech-category__title">Backend</h4>
-                            <ul class="tech-category__list">
-                                <li>Node.js</li>
-                                <li>Laravel</li>
-                                <li>Nest.js</li>
-                                <li>C#</li>
-                            </ul>
+                        <div class="tool-card" data-category="Frontend">
+                            <div class="tool-card__name">Next.js</div>
+                            <div class="tool-card__badge">Frontend</div>
                         </div>
-                        
-                        <div class="tech-category">
-                            <h4 class="tech-category__title">Automations</h4>
-                            <ul class="tech-category__list">
-                                <li>n8n</li>
-                                <li>Zapier</li>
-                            </ul>
+                        <div class="tool-card" data-category="Frontend">
+                            <div class="tool-card__name">React Native</div>
+                            <div class="tool-card__badge">Frontend</div>
                         </div>
-                        
-                        <div class="tech-category">
-                            <h4 class="tech-category__title">Design</h4>
-                            <ul class="tech-category__list">
-                                <li>Figma</li>
-                                <li>Adobe Photoshop</li>
-                                <li>Adobe Illustrator</li>
-                            </ul>
+                        <div class="tool-card" data-category="Frontend">
+                            <div class="tool-card__name">JavaScript</div>
+                            <div class="tool-card__badge">Frontend</div>
                         </div>
-                        
-                        <div class="tech-category">
-                            <h4 class="tech-category__title">Database</h4>
-                            <ul class="tech-category__list">
-                                <li>Supabase</li>
-                                <li>Firebase</li>
-                                <li>PostgreSQL</li>
-                                <li>MySQL</li>
-                                <li>MongoDB</li>
-                                <li>Redis</li>
-                            </ul>
+                        <div class="tool-card" data-category="Frontend">
+                            <div class="tool-card__name">HTML5</div>
+                            <div class="tool-card__badge">Frontend</div>
                         </div>
-                        
-                        <div class="tech-category">
-                            <h4 class="tech-category__title">Cloud & DevOps</h4>
-                            <ul class="tech-category__list">
-                                <li>Google Cloud Platform (GCP)</li>
-                                <li>Amazon Web Services (AWS)</li>
-                                <li>NGINX</li>
-                                <li>Docker</li>
-                                <li>Kubernetes</li>
-                            </ul>
+                        <div class="tool-card" data-category="Frontend">
+                            <div class="tool-card__name">CSS3</div>
+                            <div class="tool-card__badge">Frontend</div>
+                        </div>
+                        <div class="tool-card" data-category="Frontend">
+                            <div class="tool-card__name">Tailwind CSS</div>
+                            <div class="tool-card__badge">Frontend</div>
+                        </div>
+                        <div class="tool-card" data-category="Backend">
+                            <div class="tool-card__name">Node.js</div>
+                            <div class="tool-card__badge">Backend</div>
+                        </div>
+                        <div class="tool-card" data-category="Backend">
+                            <div class="tool-card__name">Laravel</div>
+                            <div class="tool-card__badge">Backend</div>
+                        </div>
+                        <div class="tool-card" data-category="Backend">
+                            <div class="tool-card__name">Nest.js</div>
+                            <div class="tool-card__badge">Backend</div>
+                        </div>
+                        <div class="tool-card" data-category="Backend">
+                            <div class="tool-card__name">C#</div>
+                            <div class="tool-card__badge">Backend</div>
+                        </div>
+                        <div class="tool-card" data-category="Automations">
+                            <div class="tool-card__name">n8n</div>
+                            <div class="tool-card__badge">Automations</div>
+                        </div>
+                        <div class="tool-card" data-category="Automations">
+                            <div class="tool-card__name">Zapier</div>
+                            <div class="tool-card__badge">Automations</div>
+                        </div>
+                        <div class="tool-card" data-category="Design">
+                            <div class="tool-card__name">Figma</div>
+                            <div class="tool-card__badge">Design</div>
+                        </div>
+                        <div class="tool-card" data-category="Design">
+                            <div class="tool-card__name">Adobe Photoshop</div>
+                            <div class="tool-card__badge">Design</div>
+                        </div>
+                        <div class="tool-card" data-category="Design">
+                            <div class="tool-card__name">Adobe Illustrator</div>
+                            <div class="tool-card__badge">Design</div>
+                        </div>
+                        <div class="tool-card" data-category="Database">
+                            <div class="tool-card__name">Supabase</div>
+                            <div class="tool-card__badge">Database</div>
+                        </div>
+                        <div class="tool-card" data-category="Database">
+                            <div class="tool-card__name">Firebase</div>
+                            <div class="tool-card__badge">Database</div>
+                        </div>
+                        <div class="tool-card" data-category="Database">
+                            <div class="tool-card__name">PostgreSQL</div>
+                            <div class="tool-card__badge">Database</div>
+                        </div>
+                        <div class="tool-card" data-category="Database">
+                            <div class="tool-card__name">MySQL</div>
+                            <div class="tool-card__badge">Database</div>
+                        </div>
+                        <div class="tool-card" data-category="Database">
+                            <div class="tool-card__name">MongoDB</div>
+                            <div class="tool-card__badge">Database</div>
+                        </div>
+                        <div class="tool-card" data-category="Database">
+                            <div class="tool-card__name">Redis</div>
+                            <div class="tool-card__badge">Database</div>
+                        </div>
+                        <div class="tool-card" data-category="Cloud & DevOps">
+                            <div class="tool-card__name">Google Cloud Platform</div>
+                            <div class="tool-card__badge">Cloud & DevOps</div>
+                        </div>
+                        <div class="tool-card" data-category="Cloud & DevOps">
+                            <div class="tool-card__name">Amazon Web Services</div>
+                            <div class="tool-card__badge">Cloud & DevOps</div>
+                        </div>
+                        <div class="tool-card" data-category="Cloud & DevOps">
+                            <div class="tool-card__name">NGINX</div>
+                            <div class="tool-card__badge">Cloud & DevOps</div>
+                        </div>
+                        <div class="tool-card" data-category="Cloud & DevOps">
+                            <div class="tool-card__name">Docker</div>
+                            <div class="tool-card__badge">Cloud & DevOps</div>
+                        </div>
+                        <div class="tool-card" data-category="Cloud & DevOps">
+                            <div class="tool-card__name">Kubernetes</div>
+                            <div class="tool-card__badge">Cloud & DevOps</div>
                         </div>
                     </div>
                 </div>
